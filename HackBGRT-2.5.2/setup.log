@@ -1,0 +1,1039 @@
+2025-06-29 12:48:37.429 | pid 16820 | HackBGRT installer version: v2.5.2
+2025-06-29 12:48:37.431 | pid 16820 | Windows version: Microsoft Windows NT 6.2.9200.0
+2025-06-29 12:48:37.431 | pid 16820 | Args: 
+2025-06-29 12:48:37.441 | pid 16820 | Your OS uses arch=x64. This will be checked again during installation.
+2025-06-29 12:48:37.441 | pid 16820 | 
+2025-06-29 12:48:37.441 | pid 16820 | Choose action (press a key):
+2025-06-29 12:48:37.441 | pid 16820 |  I = install
+2025-06-29 12:48:37.441 | pid 16820 |      - creates a new EFI boot entry for HackBGRT
+2025-06-29 12:48:37.441 | pid 16820 |  J = install (alternative)
+2025-06-29 12:48:37.441 | pid 16820 |      - creates a new EFI boot entry with an alternative method
+2025-06-29 12:48:37.441 | pid 16820 |      - try this if the first option doesn't work
+2025-06-29 12:48:37.457 | pid 16820 |  O = install (legacy)
+2025-06-29 12:48:37.460 | pid 16820 |      - overwrites the MS boot loader; gets removed by Windows updates
+2025-06-29 12:48:37.460 | pid 16820 |      - use as last resort; may brick your system if configured incorrectly
+2025-06-29 12:48:37.462 | pid 16820 |  F = install files only
+2025-06-29 12:48:37.462 | pid 16820 |      - ok for updating config, doesn't touch boot entries
+2025-06-29 12:48:37.462 | pid 16820 |  D = disable
+2025-06-29 12:48:37.462 | pid 16820 |      - removes created entries, restores MS boot loader
+2025-06-29 12:48:37.462 | pid 16820 |  R = remove completely
+2025-06-29 12:48:37.462 | pid 16820 |      - disables, then deletes all files and images
+2025-06-29 12:48:37.462 | pid 16820 |  B = boot to UEFI setup
+2025-06-29 12:48:37.462 | pid 16820 |      - lets you disable Secure Boot
+2025-06-29 12:48:37.462 | pid 16820 |      - lets you move HackBGRT before Windows in boot order
+2025-06-29 12:48:37.462 | pid 16820 |  L = show boot log (what HackBGRT did during boot)
+2025-06-29 12:48:37.462 | pid 16820 |  C = cancel
+2025-06-29 12:48:39.395 | pid 16820 | User input: I
+2025-06-29 12:48:39.411 | pid 16820 | 
+2025-06-29 12:48:39.411 | pid 16820 | This setup program lets you edit just one image.
+2025-06-29 12:48:39.411 | pid 16820 | Edit config.txt manually for advanced configuration.
+2025-06-29 12:48:39.411 | pid 16820 | Draw or copy your preferred image to splash.bmp.
+2025-06-29 12:48:39.411 | pid 16820 | StartProcess: mspaint splash.bmp
+2025-06-29 12:48:44.753 | pid 16820 | 
+2025-06-29 12:48:44.753 | pid 16820 | RunPrivilegedActions: disable install enable-bcdedit
+2025-06-29 12:48:44.763 | pid 16820 | Esp: Detect from mountvol output.
+2025-06-29 12:48:44.763 | pid 16820 | Execute: mountvol 
+2025-06-29 12:48:44.785 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:44.785 | pid 16820 | Creates, deletes, or lists a volume mount point.
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL [drive:]path VolumeName
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL [drive:]path /D
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL [drive:]path /L
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL [drive:]path /P
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL /R
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL /N
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL /E
+2025-06-29 12:48:44.785 | pid 16820 | MOUNTVOL drive: /S
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     path        Specifies the existing NTFS directory where the mount
+2025-06-29 12:48:44.785 | pid 16820 |                 point will reside.
+2025-06-29 12:48:44.785 | pid 16820 |     VolumeName  Specifies the volume name that is the target of the mount
+2025-06-29 12:48:44.785 | pid 16820 |                 point.
+2025-06-29 12:48:44.785 | pid 16820 |     /D          Removes the volume mount point from the specified directory.
+2025-06-29 12:48:44.785 | pid 16820 |     /L          Lists the mounted volume name for the specified directory.
+2025-06-29 12:48:44.785 | pid 16820 |     /P          Removes the volume mount point from the specified directory,
+2025-06-29 12:48:44.785 | pid 16820 |                 dismounts the volume, and makes the volume not mountable.
+2025-06-29 12:48:44.785 | pid 16820 |                 You can make the volume mountable again by creating a volume
+2025-06-29 12:48:44.785 | pid 16820 |                 mount point.
+2025-06-29 12:48:44.785 | pid 16820 |     /R          Removes volume mount point directories and registry settings
+2025-06-29 12:48:44.785 | pid 16820 |                 for volumes that are no longer in the system.
+2025-06-29 12:48:44.785 | pid 16820 |     /N          Disables automatic mounting of new volumes.
+2025-06-29 12:48:44.785 | pid 16820 |     /E          Re-enables automatic mounting of new volumes.
+2025-06-29 12:48:44.785 | pid 16820 |     /S          Mount the EFI System Partition on the given drive.
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 | Possible values for VolumeName along with current mount points are:
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     \\?\Volume{c07777b1-3ed7-4e45-b4c2-e025674a331a}\
+2025-06-29 12:48:44.785 | pid 16820 |         F:\
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     \\?\Volume{9b441054-59e5-4d05-b56d-8ea1ae9bc7e9}\
+2025-06-29 12:48:44.785 | pid 16820 |         C:\
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     \\?\Volume{5e1abc94-ad28-45a6-aa36-6ed2ab14dc68}\
+2025-06-29 12:48:44.785 | pid 16820 |         *** NO MOUNT POINTS ***
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     \\?\Volume{856946ce-8cff-4a88-8fc8-c617302cd25c}\
+2025-06-29 12:48:44.785 | pid 16820 |         *** NO MOUNT POINTS ***
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     \\?\Volume{0288ebd3-d67c-430c-f41f-545dee81dc4e}\
+2025-06-29 12:48:44.785 | pid 16820 |         *** NO MOUNT POINTS ***
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 |     \\?\Volume{8c7b79fd-c562-443a-8d60-b514646835e0}\
+2025-06-29 12:48:44.785 | pid 16820 |         *** NO MOUNT POINTS ***
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.785 | pid 16820 | 
+2025-06-29 12:48:44.801 | pid 16820 | Esp: no match
+2025-06-29 12:48:44.801 | pid 16820 | Esp: Try to mount with mountvol.
+2025-06-29 12:48:44.801 | pid 16820 | Esp.Mount: A
+2025-06-29 12:48:44.801 | pid 16820 | Execute: mountvol A: /S
+2025-06-29 12:48:44.817 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:44.817 | pid 16820 | 
+2025-06-29 12:48:44.817 | pid 16820 | 
+2025-06-29 12:48:44.817 | pid 16820 | 
+2025-06-29 12:48:44.817 | pid 16820 | Esp.TryPath: A:\ has MS boot loader
+2025-06-29 12:48:44.817 | pid 16820 | EFI System Partition location is A:\
+2025-06-29 12:48:44.880 | pid 16820 | Detected arch=x64 from MS boot loader, the installer will use that.
+2025-06-29 12:48:44.880 | pid 16820 | 
+2025-06-29 12:48:44.880 | pid 16820 | --- BOOT LOG START ---
+2025-06-29 12:48:44.880 | pid 16820 | Boot log is empty.
+2025-06-29 12:48:44.880 | pid 16820 | --- BOOT LOG END ---
+2025-06-29 12:48:44.880 | pid 16820 | LogBGRT: 56 bytes: 42 47 52 54 38 00 00 00 01 CE 44 45 4C 4C 20 20 44 65 6C 6C 20 49 6E 63 01 00 17 20 84 85 4C 4C 22 04 16 20 01 00 01 00 18 00 37 5F 00 00 00 00 EE 02 00 00 D9 00 00 00
+2025-06-29 12:48:44.900 | pid 16820 | LogEntries: BootOrder Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    ' Bytes='02 00 00 00'
+2025-06-29 12:48:44.902 | pid 16820 | LogEntries: BootCurrent Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=6 Text='  ' Bytes='02 00'
+2025-06-29 12:48:44.939 | pid 16820 | LogEntries: Boot0002 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    t W i n d o w s   B o o t   M a n a g e r     *                      y{ b :D `  dh5     F \ E F I \ M i c r o s o f t \ B o o t \ b o o t m g f w . e f i      WINDOWS         x   B C D O B J E C T = { 9 d e a 8 6 2 c - 5 c d d - 4 e 7 0 - a c c 1 - f 3 2 b 3 4 4 d 4 7 9 5 }                    ' Bytes='01 00 00 00 74 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 42 00 6F 00 6F 00 74 00 20 00 4D 00 61 00 6E 00 61 00 67 00 65 00 72 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 46 00 5C 00 45 00 46 00 49 00 5C 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 62 00 6F 00 6F 00 74 00 6D 00 67 00 66 00 77 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 39 00 64 00 65 00 61 00 38 00 36 00 32 00 63 00 2D 00 35 00 63 00 64 00 64 00 2D 00 34 00 65 00 37 00 30 00 2D 00 61 00 63 00 63 00 31 00 2D 00 66 00 33 00 32 00 62 00 33 00 34 00 34 00 64 00 34 00 37 00 39 00 35 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:48:44.939 | pid 16820 | LogEntries: Boot0000 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    ^ U E F I   P C   S N 5 3 0   N V M e   W D C   2 5 6 G B   2 0 2 2 6 9 8 0 9 5 8 1   1     *                      y{ b :D `  dh5     0 \ E F I \ B o o t \ B o o t X 6 4 . e f i      N     YM    R,Y ' Bytes='01 00 00 00 5E 00 55 00 45 00 46 00 49 00 20 00 50 00 43 00 20 00 53 00 4E 00 35 00 33 00 30 00 20 00 4E 00 56 00 4D 00 65 00 20 00 57 00 44 00 43 00 20 00 32 00 35 00 36 00 47 00 42 00 20 00 32 00 30 00 32 00 32 00 36 00 39 00 38 00 30 00 39 00 35 00 38 00 31 00 20 00 31 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 30 00 5C 00 45 00 46 00 49 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 58 00 36 00 34 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 4E AC 08 81 11 9F 59 4D 85 0E E2 1A 52 2C 59 B2'
+2025-06-29 12:48:45.024 | pid 16820 | HackBGRT boot entry is missing.
+2025-06-29 12:48:45.105 | pid 16820 | Boot time = 2025-06-29 11:19:06 AM, config.txt changed = 2025-06-29 12:36:04 PM
+2025-06-29 12:48:45.105 | pid 16820 | Windows was booted at 2025-06-29 11:19:06 AM. Remember to reboot after installing!
+2025-06-29 12:48:45.118 | pid 16820 | You may have to disable Fast Startup (Hiberboot) to reboot properly.
+2025-06-29 12:48:45.118 | pid 16820 | Running action 'disable'.
+2025-06-29 12:48:45.661 | pid 16820 | DetectLoader failed: A:\EFI\HackBGRT\bootmgfw-original.efi not found
+2025-06-29 12:48:45.661 | pid 16820 | Execute: bcdedit /enum firmware
+2025-06-29 12:48:46.246 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:46.246 | pid 16820 | 
+2025-06-29 12:48:46.246 | pid 16820 | Firmware Boot Manager
+2025-06-29 12:48:46.246 | pid 16820 | ---------------------
+2025-06-29 12:48:46.246 | pid 16820 | identifier              {fwbootmgr}
+2025-06-29 12:48:46.246 | pid 16820 | displayorder            {bootmgr}
+2025-06-29 12:48:46.246 | pid 16820 |                         {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:46.246 | pid 16820 | timeout                 2
+2025-06-29 12:48:46.246 | pid 16820 | 
+2025-06-29 12:48:46.246 | pid 16820 | Windows Boot Manager
+2025-06-29 12:48:46.246 | pid 16820 | --------------------
+2025-06-29 12:48:46.246 | pid 16820 | identifier              {bootmgr}
+2025-06-29 12:48:46.246 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:46.246 | pid 16820 | path                    \EFI\Microsoft\Boot\bootmgfw.efi
+2025-06-29 12:48:46.246 | pid 16820 | description             Windows Boot Manager
+2025-06-29 12:48:46.246 | pid 16820 | locale                  en-US
+2025-06-29 12:48:46.246 | pid 16820 | inherit                 {globalsettings}
+2025-06-29 12:48:46.246 | pid 16820 | default                 {current}
+2025-06-29 12:48:46.246 | pid 16820 | resumeobject            {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:48:46.246 | pid 16820 | displayorder            {current}
+2025-06-29 12:48:46.246 | pid 16820 | toolsdisplayorder       {memdiag}
+2025-06-29 12:48:46.246 | pid 16820 | timeout                 30
+2025-06-29 12:48:46.246 | pid 16820 | 
+2025-06-29 12:48:46.246 | pid 16820 | Firmware Application (101fffff)
+2025-06-29 12:48:46.246 | pid 16820 | -------------------------------
+2025-06-29 12:48:46.246 | pid 16820 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:46.246 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:46.246 | pid 16820 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:48:46.246 | pid 16820 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:48:46.246 | pid 16820 | 
+2025-06-29 12:48:46.246 | pid 16820 | 
+2025-06-29 12:48:46.246 | pid 16820 | 
+2025-06-29 12:48:46.246 | pid 16820 | Execute: bcdedit /enum {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:46.365 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:46.365 | pid 16820 | 
+2025-06-29 12:48:46.365 | pid 16820 | Firmware Application (101fffff)
+2025-06-29 12:48:46.365 | pid 16820 | -------------------------------
+2025-06-29 12:48:46.365 | pid 16820 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:46.365 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:46.365 | pid 16820 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:48:46.365 | pid 16820 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:48:46.365 | pid 16820 | 
+2025-06-29 12:48:46.365 | pid 16820 | 
+2025-06-29 12:48:46.365 | pid 16820 | 
+2025-06-29 12:48:46.365 | pid 16820 | Execute: bcdedit /enum {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:48:46.541 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:46.541 | pid 16820 | 
+2025-06-29 12:48:46.541 | pid 16820 | Resume from Hibernate
+2025-06-29 12:48:46.541 | pid 16820 | ---------------------
+2025-06-29 12:48:46.541 | pid 16820 | identifier              {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:48:46.541 | pid 16820 | device                  partition=C:
+2025-06-29 12:48:46.541 | pid 16820 | path                    \WINDOWS\system32\winresume.efi
+2025-06-29 12:48:46.541 | pid 16820 | description             Windows Resume Application
+2025-06-29 12:48:46.541 | pid 16820 | locale                  en-US
+2025-06-29 12:48:46.541 | pid 16820 | inherit                 {resumeloadersettings}
+2025-06-29 12:48:46.541 | pid 16820 | recoverysequence        {92e23cad-b331-11ef-81e9-e8e2e473cd93}
+2025-06-29 12:48:46.541 | pid 16820 | recoveryenabled         Yes
+2025-06-29 12:48:46.541 | pid 16820 | isolatedcontext         Yes
+2025-06-29 12:48:46.541 | pid 16820 | allowedinmemorysettings 0x15000075
+2025-06-29 12:48:46.541 | pid 16820 | filedevice              partition=C:
+2025-06-29 12:48:46.541 | pid 16820 | custom:21000026         partition=C:
+2025-06-29 12:48:46.541 | pid 16820 | filepath                \hiberfil.sys
+2025-06-29 12:48:46.541 | pid 16820 | bootmenupolicy          Standard
+2025-06-29 12:48:46.541 | pid 16820 | debugoptionenabled      No
+2025-06-29 12:48:46.541 | pid 16820 | 
+2025-06-29 12:48:46.541 | pid 16820 | 
+2025-06-29 12:48:46.541 | pid 16820 | 
+2025-06-29 12:48:46.617 | pid 16820 | Own entry not found.
+2025-06-29 12:48:46.617 | pid 16820 | Disabled NVRAM entry for HackBGRT.
+2025-06-29 12:48:46.617 | pid 16820 | HackBGRT has been disabled.
+2025-06-29 12:48:46.617 | pid 16820 | Completed action 'disable' successfully.
+2025-06-29 12:48:46.617 | pid 16820 | Running action 'install'.
+2025-06-29 12:48:46.633 | pid 16820 | Installed config.txt to A:\EFI\HackBGRT\config.txt.
+2025-06-29 12:48:46.633 | pid 16820 | config.txt:
+2025-06-29 12:48:46.633 | pid 16820 | # vim: set fileencoding=utf-8
+2025-06-29 12:48:46.633 | pid 16820 | # The same options may be given also as command line parameters in the EFI Shell, which is useful for debugging.
+2025-06-29 12:48:46.633 | pid 16820 | 
+2025-06-29 12:48:46.633 | pid 16820 | # Boot loader path. MS = either backup or original Windows boot loader.
+2025-06-29 12:48:46.633 | pid 16820 | boot=MS
+2025-06-29 12:48:46.633 | pid 16820 | 
+2025-06-29 12:48:46.633 | pid 16820 | # The image is specified with an image line.
+2025-06-29 12:48:46.633 | pid 16820 | # Multiple image lines may be present, in which case one will be picked by random.
+2025-06-29 12:48:46.633 | pid 16820 | # The image line may contain the following parts:
+2025-06-29 12:48:46.633 | pid 16820 | # Any of the following:
+2025-06-29 12:48:46.633 | pid 16820 | #  - "n=(number)", a weight for this image in the randomization process. Default: n=1.
+2025-06-29 12:48:46.633 | pid 16820 | #  - "x=(number)" or "x=keep", the x offset from the center. Default: x=0.
+2025-06-29 12:48:46.633 | pid 16820 | #  - "y=(number)" or "y=keep", the y offset from the center. Default: y=0.
+2025-06-29 12:48:46.633 | pid 16820 | #  - "o=(0|90|180|270|keep)", the screen orientation, degrees anticlockwise. Default: o=keep.
+2025-06-29 12:48:46.633 | pid 16820 | # One of the following:
+2025-06-29 12:48:46.633 | pid 16820 | #  - "keep" to keep the firmware logo. Also keeps coordinates by default.
+2025-06-29 12:48:46.633 | pid 16820 | #  - "remove" to remove the BGRT. Makes x and y meaningless.
+2025-06-29 12:48:46.633 | pid 16820 | #  - "black" to use only a black image. Makes x and y meaningless.
+2025-06-29 12:48:46.633 | pid 16820 | #  - "path=file.bmp" to read an image file.
+2025-06-29 12:48:46.633 | pid 16820 | #    * NOTE: The installer can copy and convert BMP, PNG, JPEG, GIF.
+2025-06-29 12:48:46.633 | pid 16820 | # Examples:
+2025-06-29 12:48:46.633 | pid 16820 | #  - image=remove
+2025-06-29 12:48:46.633 | pid 16820 | #  - image=black
+2025-06-29 12:48:46.633 | pid 16820 | #  - image= x=0 y=-200 path=topimage.bmp
+2025-06-29 12:48:46.633 | pid 16820 | #  - image= n=1 o=90 path=sideways.bmp
+2025-06-29 12:48:46.633 | pid 16820 | #  - image= n=50 y=999999 o=keep path=probable.bmp
+2025-06-29 12:48:46.633 | pid 16820 | # The above examples together would produce
+2025-06-29 12:48:46.633 | pid 16820 | #  - 1/54 chance for the default OS logo
+2025-06-29 12:48:46.633 | pid 16820 | #  - 1/54 chance for black screen
+2025-06-29 12:48:46.633 | pid 16820 | #  - 1/54 chance for topimage.bmp, 200 px above the center of the screen
+2025-06-29 12:48:46.633 | pid 16820 | #  - 1/54 chance for splash.bmp, centered, orientation set to 90 degrees
+2025-06-29 12:48:46.633 | pid 16820 | #  - 50/54 chance for probable.bmp, at the bottom edge, explicitly default orientation
+2025-06-29 12:48:46.633 | pid 16820 | # Default: just one image.
+2025-06-29 12:48:46.633 | pid 16820 | image= y=-200 path=splash.bmp
+2025-06-29 12:48:46.633 | pid 16820 | 
+2025-06-29 12:48:46.633 | pid 16820 | # Preferred resolution. Use 0x0 for maximum and -1x-1 for original.
+2025-06-29 12:48:46.633 | pid 16820 | resolution=0x0
+2025-06-29 12:48:46.633 | pid 16820 | 
+2025-06-29 12:48:46.633 | pid 16820 | # Logging (0 for disabled, 1 for enabled).
+2025-06-29 12:48:46.633 | pid 16820 | # When logging is enabled, setup.exe can show debug information about the current boot.
+2025-06-29 12:48:46.633 | pid 16820 | # The log might occupy a few kilobytes of RAM.
+2025-06-29 12:48:46.633 | pid 16820 | log=1
+2025-06-29 12:48:46.633 | pid 16820 | 
+2025-06-29 12:48:46.633 | pid 16820 | # Debug mode (0 for disabled, 1 for enabled).
+2025-06-29 12:48:46.633 | pid 16820 | # Shows debug information and prompts for keypress before booting.
+2025-06-29 12:48:46.633 | pid 16820 | debug=0
+2025-06-29 12:48:46.638 | pid 16820 | InstallImageFile: splash.bmp
+2025-06-29 12:48:46.685 | pid 16820 | Installed image splash.bmp to A:\EFI\HackBGRT\splash.bmp, size 1920x1200.
+2025-06-29 12:48:46.685 | pid 16820 | Installed shim-signed\shimx64.efi to A:\EFI\HackBGRT\loader.efi.
+2025-06-29 12:48:46.685 | pid 16820 | Installed shim-signed\mmx64.efi to A:\EFI\HackBGRT\mmx64.efi.
+2025-06-29 12:48:46.696 | pid 16820 | Installed efi-signed\bootx64.efi to A:\EFI\HackBGRT\䥗䑎坏SX.
+2025-06-29 12:48:46.696 | pid 16820 | Installed efi-signed\bootx64.efi to A:\EFI\HackBGRT\grubx64.efi.
+2025-06-29 12:48:46.696 | pid 16820 | Installed certificate.cer to A:\EFI\HackBGRT\certificate.cer.
+2025-06-29 12:48:46.696 | pid 16820 | HackBGRT has been copied to A:\EFI\HackBGRT.
+2025-06-29 12:48:46.696 | pid 16820 | On first boot, select 'Enroll hash from disk' and enroll EFI\HackBGRT\grubx64.efi.
+2025-06-29 12:48:46.696 | pid 16820 | Alternatively, select 'Enroll key from disk' and enroll EFI\HackBGRT\certificate.cer.
+2025-06-29 12:48:46.696 | pid 16820 | Completed action 'install' successfully.
+2025-06-29 12:48:46.696 | pid 16820 | Running action 'enable-bcdedit'.
+2025-06-29 12:48:46.696 | pid 16820 | Execute: manage-bde -status
+2025-06-29 12:48:47.190 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:47.190 | pid 16820 | BitLocker Drive Encryption: Configuration Tool version 10.0.26100
+2025-06-29 12:48:47.190 | pid 16820 | Copyright (C) 2013 Microsoft Corporation. All rights reserved.
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | Disk volumes that can be protected with
+2025-06-29 12:48:47.190 | pid 16820 | BitLocker Drive Encryption:
+2025-06-29 12:48:47.190 | pid 16820 | Volume F: [Portable Backup]
+2025-06-29 12:48:47.190 | pid 16820 | [Data Volume]
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 |     Size:                 931.50 GB
+2025-06-29 12:48:47.190 | pid 16820 |     BitLocker Version:    2.0
+2025-06-29 12:48:47.190 | pid 16820 |     Conversion Status:    Used Space Only Encrypted
+2025-06-29 12:48:47.190 | pid 16820 |     Percentage Encrypted: 100.0%
+2025-06-29 12:48:47.190 | pid 16820 |     Encryption Method:    AES 128
+2025-06-29 12:48:47.190 | pid 16820 |     Protection Status:    Protection On
+2025-06-29 12:48:47.190 | pid 16820 |     Lock Status:          Unlocked
+2025-06-29 12:48:47.190 | pid 16820 |     Identification Field: Unknown
+2025-06-29 12:48:47.190 | pid 16820 |     Automatic Unlock:     Disabled
+2025-06-29 12:48:47.190 | pid 16820 |     Key Protectors:
+2025-06-29 12:48:47.190 | pid 16820 |         Password
+2025-06-29 12:48:47.190 | pid 16820 |         Numerical Password
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | Volume C: [Windows]
+2025-06-29 12:48:47.190 | pid 16820 | [OS Volume]
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 |     Size:                 235.14 GB
+2025-06-29 12:48:47.190 | pid 16820 |     BitLocker Version:    None
+2025-06-29 12:48:47.190 | pid 16820 |     Conversion Status:    Fully Decrypted
+2025-06-29 12:48:47.190 | pid 16820 |     Percentage Encrypted: 0.0%
+2025-06-29 12:48:47.190 | pid 16820 |     Encryption Method:    None
+2025-06-29 12:48:47.190 | pid 16820 |     Protection Status:    Protection Off
+2025-06-29 12:48:47.190 | pid 16820 |     Lock Status:          Unlocked
+2025-06-29 12:48:47.190 | pid 16820 |     Identification Field: None
+2025-06-29 12:48:47.190 | pid 16820 |     Key Protectors:       None Found
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | Volume \\?\Volume{856946ce-8cff-4a88-8fc8-c617302cd25c}\ []
+2025-06-29 12:48:47.190 | pid 16820 | [Data Volume]
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 |     Size:                 0.57 GB
+2025-06-29 12:48:47.190 | pid 16820 |     BitLocker Version:    None
+2025-06-29 12:48:47.190 | pid 16820 |     Conversion Status:    Fully Decrypted
+2025-06-29 12:48:47.190 | pid 16820 |     Percentage Encrypted: 0.0%
+2025-06-29 12:48:47.190 | pid 16820 |     Encryption Method:    None
+2025-06-29 12:48:47.190 | pid 16820 |     Protection Status:    Protection Off
+2025-06-29 12:48:47.190 | pid 16820 |     Lock Status:          Unlocked
+2025-06-29 12:48:47.190 | pid 16820 |     Identification Field: None
+2025-06-29 12:48:47.190 | pid 16820 |     Automatic Unlock:     Disabled
+2025-06-29 12:48:47.190 | pid 16820 |     Key Protectors:       None Found
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | 
+2025-06-29 12:48:47.190 | pid 16820 | BitLocker is enabled. Make sure you have your recovery key!
+2025-06-29 12:48:47.190 | pid 16820 | Choose action (press a key):
+2025-06-29 12:48:47.190 | pid 16820 |  I = Install anyway; THIS MAY BE DANGEROUS!
+2025-06-29 12:48:47.204 | pid 16820 |  C = Cancel
+2025-06-29 12:48:51.617 | pid 16820 | User input: I
+2025-06-29 12:48:51.617 | pid 16820 | 
+2025-06-29 12:48:51.617 | pid 16820 | Continuing. THIS MAY BE DANGEROUS!
+2025-06-29 12:48:51.633 | pid 16820 | Execute: bcdedit /enum firmware
+2025-06-29 12:48:51.792 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:51.792 | pid 16820 | 
+2025-06-29 12:48:51.792 | pid 16820 | Firmware Boot Manager
+2025-06-29 12:48:51.792 | pid 16820 | ---------------------
+2025-06-29 12:48:51.792 | pid 16820 | identifier              {fwbootmgr}
+2025-06-29 12:48:51.792 | pid 16820 | displayorder            {bootmgr}
+2025-06-29 12:48:51.792 | pid 16820 |                         {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:51.792 | pid 16820 | timeout                 2
+2025-06-29 12:48:51.792 | pid 16820 | 
+2025-06-29 12:48:51.792 | pid 16820 | Windows Boot Manager
+2025-06-29 12:48:51.792 | pid 16820 | --------------------
+2025-06-29 12:48:51.792 | pid 16820 | identifier              {bootmgr}
+2025-06-29 12:48:51.792 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:51.792 | pid 16820 | path                    \EFI\Microsoft\Boot\bootmgfw.efi
+2025-06-29 12:48:51.792 | pid 16820 | description             Windows Boot Manager
+2025-06-29 12:48:51.792 | pid 16820 | locale                  en-US
+2025-06-29 12:48:51.792 | pid 16820 | inherit                 {globalsettings}
+2025-06-29 12:48:51.792 | pid 16820 | default                 {current}
+2025-06-29 12:48:51.792 | pid 16820 | resumeobject            {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:48:51.792 | pid 16820 | displayorder            {current}
+2025-06-29 12:48:51.792 | pid 16820 | toolsdisplayorder       {memdiag}
+2025-06-29 12:48:51.792 | pid 16820 | timeout                 30
+2025-06-29 12:48:51.792 | pid 16820 | 
+2025-06-29 12:48:51.792 | pid 16820 | Firmware Application (101fffff)
+2025-06-29 12:48:51.792 | pid 16820 | -------------------------------
+2025-06-29 12:48:51.792 | pid 16820 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:51.792 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:51.792 | pid 16820 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:48:51.792 | pid 16820 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:48:51.792 | pid 16820 | 
+2025-06-29 12:48:51.792 | pid 16820 | 
+2025-06-29 12:48:51.792 | pid 16820 | 
+2025-06-29 12:48:51.792 | pid 16820 | Execute: bcdedit /copy {bootmgr} /d HackBGRT
+2025-06-29 12:48:51.998 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:51.998 | pid 16820 | The entry was successfully copied to {7f3de22f-54bd-11f0-8210-010101010000}.
+2025-06-29 12:48:51.998 | pid 16820 | 
+2025-06-29 12:48:51.998 | pid 16820 | 
+2025-06-29 12:48:51.998 | pid 16820 | 
+2025-06-29 12:48:51.998 | pid 16820 | Execute: bcdedit /set {7f3de22f-54bd-11f0-8210-010101010000} device partition=A:\
+2025-06-29 12:48:52.156 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.156 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.156 | pid 16820 | 
+2025-06-29 12:48:52.156 | pid 16820 | 
+2025-06-29 12:48:52.156 | pid 16820 | 
+2025-06-29 12:48:52.156 | pid 16820 | Execute: bcdedit /set {7f3de22f-54bd-11f0-8210-010101010000} path \EFI\HackBGRT\loader.efi
+2025-06-29 12:48:52.338 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.338 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.338 | pid 16820 | 
+2025-06-29 12:48:52.338 | pid 16820 | 
+2025-06-29 12:48:52.338 | pid 16820 | 
+2025-06-29 12:48:52.338 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} locale
+2025-06-29 12:48:52.419 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.419 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.419 | pid 16820 | 
+2025-06-29 12:48:52.419 | pid 16820 | 
+2025-06-29 12:48:52.419 | pid 16820 | 
+2025-06-29 12:48:52.419 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} inherit
+2025-06-29 12:48:52.514 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.514 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.514 | pid 16820 | 
+2025-06-29 12:48:52.514 | pid 16820 | 
+2025-06-29 12:48:52.514 | pid 16820 | 
+2025-06-29 12:48:52.514 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} default
+2025-06-29 12:48:52.609 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.609 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.609 | pid 16820 | 
+2025-06-29 12:48:52.609 | pid 16820 | 
+2025-06-29 12:48:52.609 | pid 16820 | 
+2025-06-29 12:48:52.609 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} resumeobject
+2025-06-29 12:48:52.705 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.705 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.705 | pid 16820 | 
+2025-06-29 12:48:52.705 | pid 16820 | 
+2025-06-29 12:48:52.705 | pid 16820 | 
+2025-06-29 12:48:52.705 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} displayorder
+2025-06-29 12:48:52.801 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.801 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.801 | pid 16820 | 
+2025-06-29 12:48:52.801 | pid 16820 | 
+2025-06-29 12:48:52.801 | pid 16820 | 
+2025-06-29 12:48:52.801 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} toolsdisplayorder
+2025-06-29 12:48:52.880 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.880 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.880 | pid 16820 | 
+2025-06-29 12:48:52.880 | pid 16820 | 
+2025-06-29 12:48:52.880 | pid 16820 | 
+2025-06-29 12:48:52.880 | pid 16820 | Execute: bcdedit /deletevalue {7f3de22f-54bd-11f0-8210-010101010000} timeout
+2025-06-29 12:48:52.960 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:52.960 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:52.960 | pid 16820 | 
+2025-06-29 12:48:52.960 | pid 16820 | 
+2025-06-29 12:48:52.960 | pid 16820 | 
+2025-06-29 12:48:52.960 | pid 16820 | Execute: bcdedit /set {fwbootmgr} displayorder {7f3de22f-54bd-11f0-8210-010101010000} /addfirst
+2025-06-29 12:48:53.147 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:53.147 | pid 16820 | The operation completed successfully.
+2025-06-29 12:48:53.147 | pid 16820 | 
+2025-06-29 12:48:53.147 | pid 16820 | 
+2025-06-29 12:48:53.147 | pid 16820 | 
+2025-06-29 12:48:53.147 | pid 16820 | Enabled NVRAM entry for HackBGRT with BCDEdit.
+2025-06-29 12:48:53.147 | pid 16820 | Execute: bcdedit /enum {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:48:53.269 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:53.269 | pid 16820 | 
+2025-06-29 12:48:53.269 | pid 16820 | Windows Boot Manager
+2025-06-29 12:48:53.269 | pid 16820 | --------------------
+2025-06-29 12:48:53.269 | pid 16820 | identifier              {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:48:53.269 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:53.269 | pid 16820 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:48:53.269 | pid 16820 | description             HackBGRT
+2025-06-29 12:48:53.269 | pid 16820 | 
+2025-06-29 12:48:53.269 | pid 16820 | 
+2025-06-29 12:48:53.269 | pid 16820 | 
+2025-06-29 12:48:53.269 | pid 16820 | Updating own entry 0001.
+2025-06-29 12:48:53.269 | pid 16820 | Read EFI variable: Boot0002 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    t W i n d o w s   B o o t   M a n a g e r     *                      y{ b :D `  dh5     F \ E F I \ M i c r o s o f t \ B o o t \ b o o t m g f w . e f i      WINDOWS         x   B C D O B J E C T = { 9 d e a 8 6 2 c - 5 c d d - 4 e 7 0 - a c c 1 - f 3 2 b 3 4 4 d 4 7 9 5 }                    ' Bytes='01 00 00 00 74 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 42 00 6F 00 6F 00 74 00 20 00 4D 00 61 00 6E 00 61 00 67 00 65 00 72 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 46 00 5C 00 45 00 46 00 49 00 5C 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 62 00 6F 00 6F 00 74 00 6D 00 67 00 66 00 77 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 39 00 64 00 65 00 61 00 38 00 36 00 32 00 63 00 2D 00 35 00 63 00 64 00 64 00 2D 00 34 00 65 00 37 00 30 00 2D 00 61 00 63 00 63 00 31 00 2D 00 66 00 33 00 32 00 62 00 33 00 34 00 34 00 64 00 34 00 37 00 39 00 35 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:48:53.269 | pid 16820 | Read EFI variable: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS         x   B C D O B J E C T = { 7 f 3 d e 2 2 f - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 32 00 66 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:48:53.285 | pid 16820 | Writing EFI variable Boot0001 (see log for details)
+2025-06-29 12:48:53.285 | pid 16820 | Writing EFI variable: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS X       x   B C D O B J E C T = { 7 f 3 d e 2 2 f - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 58 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 32 00 66 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:48:53.311 | pid 16820 | Old boot order: BootOrder Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='      ' Bytes='01 00 02 00 00 00'
+2025-06-29 12:48:53.311 | pid 16820 | Execute: bcdedit /enum {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:48:53.422 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:53.422 | pid 16820 | 
+2025-06-29 12:48:53.422 | pid 16820 | Windows Boot Manager
+2025-06-29 12:48:53.422 | pid 16820 | --------------------
+2025-06-29 12:48:53.422 | pid 16820 | identifier              {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:48:53.422 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:53.422 | pid 16820 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:48:53.422 | pid 16820 | description             HackBGRT
+2025-06-29 12:48:53.422 | pid 16820 | 
+2025-06-29 12:48:53.422 | pid 16820 | 
+2025-06-29 12:48:53.422 | pid 16820 | 
+2025-06-29 12:48:53.422 | pid 16820 | Verifying config: boot=MS
+2025-06-29 12:48:53.422 | pid 16820 | DetectLoader failed: A:\EFI\HackBGRT\bootmgfw-original.efi not found
+2025-06-29 12:48:53.683 | pid 16820 | LogEntries: BootOrder Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='      ' Bytes='01 00 02 00 00 00'
+2025-06-29 12:48:53.683 | pid 16820 | LogEntries: BootCurrent Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=6 Text='  ' Bytes='02 00'
+2025-06-29 12:48:53.683 | pid 16820 | LogEntries: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS X       x   B C D O B J E C T = { 7 f 3 d e 2 2 f - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 58 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 32 00 66 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:48:53.685 | pid 16820 | LogEntries: Boot0002 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    t W i n d o w s   B o o t   M a n a g e r     *                      y{ b :D `  dh5     F \ E F I \ M i c r o s o f t \ B o o t \ b o o t m g f w . e f i      WINDOWS         x   B C D O B J E C T = { 9 d e a 8 6 2 c - 5 c d d - 4 e 7 0 - a c c 1 - f 3 2 b 3 4 4 d 4 7 9 5 }                    ' Bytes='01 00 00 00 74 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 42 00 6F 00 6F 00 74 00 20 00 4D 00 61 00 6E 00 61 00 67 00 65 00 72 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 46 00 5C 00 45 00 46 00 49 00 5C 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 62 00 6F 00 6F 00 74 00 6D 00 67 00 66 00 77 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 39 00 64 00 65 00 61 00 38 00 36 00 32 00 63 00 2D 00 35 00 63 00 64 00 64 00 2D 00 34 00 65 00 37 00 30 00 2D 00 61 00 63 00 63 00 31 00 2D 00 66 00 33 00 32 00 62 00 33 00 34 00 34 00 64 00 34 00 37 00 39 00 35 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:48:53.685 | pid 16820 | LogEntries: Boot0000 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    ^ U E F I   P C   S N 5 3 0   N V M e   W D C   2 5 6 G B   2 0 2 2 6 9 8 0 9 5 8 1   1     *                      y{ b :D `  dh5     0 \ E F I \ B o o t \ B o o t X 6 4 . e f i      N     YM    R,Y ' Bytes='01 00 00 00 5E 00 55 00 45 00 46 00 49 00 20 00 50 00 43 00 20 00 53 00 4E 00 35 00 33 00 30 00 20 00 4E 00 56 00 4D 00 65 00 20 00 57 00 44 00 43 00 20 00 32 00 35 00 36 00 47 00 42 00 20 00 32 00 30 00 32 00 32 00 36 00 39 00 38 00 30 00 39 00 35 00 38 00 31 00 20 00 31 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 30 00 5C 00 45 00 46 00 49 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 58 00 36 00 34 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 4E AC 08 81 11 9F 59 4D 85 0E E2 1A 52 2C 59 B2'
+2025-06-29 12:48:53.771 | pid 16820 | HackBGRT boot entry is enabled correctly.
+2025-06-29 12:48:53.771 | pid 16820 | Execute: bcdedit /enum firmware
+2025-06-29 12:48:53.979 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | Firmware Boot Manager
+2025-06-29 12:48:53.979 | pid 16820 | ---------------------
+2025-06-29 12:48:53.979 | pid 16820 | identifier              {fwbootmgr}
+2025-06-29 12:48:53.979 | pid 16820 | displayorder            {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:48:53.979 | pid 16820 |                         {bootmgr}
+2025-06-29 12:48:53.979 | pid 16820 |                         {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:53.979 | pid 16820 | timeout                 2
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | Windows Boot Manager
+2025-06-29 12:48:53.979 | pid 16820 | --------------------
+2025-06-29 12:48:53.979 | pid 16820 | identifier              {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:48:53.979 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:53.979 | pid 16820 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:48:53.979 | pid 16820 | description             HackBGRT
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | Windows Boot Manager
+2025-06-29 12:48:53.979 | pid 16820 | --------------------
+2025-06-29 12:48:53.979 | pid 16820 | identifier              {bootmgr}
+2025-06-29 12:48:53.979 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:53.979 | pid 16820 | path                    \EFI\Microsoft\Boot\bootmgfw.efi
+2025-06-29 12:48:53.979 | pid 16820 | description             Windows Boot Manager
+2025-06-29 12:48:53.979 | pid 16820 | locale                  en-US
+2025-06-29 12:48:53.979 | pid 16820 | inherit                 {globalsettings}
+2025-06-29 12:48:53.979 | pid 16820 | default                 {current}
+2025-06-29 12:48:53.979 | pid 16820 | resumeobject            {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:48:53.979 | pid 16820 | displayorder            {current}
+2025-06-29 12:48:53.979 | pid 16820 | toolsdisplayorder       {memdiag}
+2025-06-29 12:48:53.979 | pid 16820 | timeout                 30
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | Firmware Application (101fffff)
+2025-06-29 12:48:53.979 | pid 16820 | -------------------------------
+2025-06-29 12:48:53.979 | pid 16820 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:48:53.979 | pid 16820 | device                  partition=A:
+2025-06-29 12:48:53.979 | pid 16820 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:48:53.979 | pid 16820 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | Completed action 'enable-bcdedit' successfully.
+2025-06-29 12:48:53.979 | pid 16820 | 
+2025-06-29 12:48:53.979 | pid 16820 | All done!
+2025-06-29 12:48:53.979 | pid 16820 | If you need to report a bug,
+2025-06-29 12:48:53.979 | pid 16820 |  - run this setup again with menu option L (show-boot-log)
+2025-06-29 12:48:53.979 | pid 16820 |  - then include the setup.log file with your report.
+2025-06-29 12:48:53.979 | pid 16820 | Press any key to quit.
+2025-06-29 12:48:56.617 | pid 16820 | Execute: mountvol A:\ /D
+2025-06-29 12:48:56.633 | pid 16820 | Exit code: 0, output:
+2025-06-29 12:48:56.633 | pid 16820 | 
+2025-06-29 12:48:56.633 | pid 16820 | 
+2025-06-29 12:48:56.633 | pid 16820 | 
+2025-06-29 12:52:29.280 | pid 14104 | HackBGRT installer version: v2.5.2
+2025-06-29 12:52:29.282 | pid 14104 | Windows version: Microsoft Windows NT 6.2.9200.0
+2025-06-29 12:52:29.282 | pid 14104 | Args: 
+2025-06-29 12:52:29.288 | pid 14104 | Your OS uses arch=x64. This will be checked again during installation.
+2025-06-29 12:52:29.288 | pid 14104 | 
+2025-06-29 12:52:29.288 | pid 14104 | Choose action (press a key):
+2025-06-29 12:52:29.288 | pid 14104 |  I = install
+2025-06-29 12:52:29.288 | pid 14104 |      - creates a new EFI boot entry for HackBGRT
+2025-06-29 12:52:29.288 | pid 14104 |  J = install (alternative)
+2025-06-29 12:52:29.288 | pid 14104 |      - creates a new EFI boot entry with an alternative method
+2025-06-29 12:52:29.288 | pid 14104 |      - try this if the first option doesn't work
+2025-06-29 12:52:29.288 | pid 14104 |  O = install (legacy)
+2025-06-29 12:52:29.288 | pid 14104 |      - overwrites the MS boot loader; gets removed by Windows updates
+2025-06-29 12:52:29.288 | pid 14104 |      - use as last resort; may brick your system if configured incorrectly
+2025-06-29 12:52:29.288 | pid 14104 |  F = install files only
+2025-06-29 12:52:29.288 | pid 14104 |      - ok for updating config, doesn't touch boot entries
+2025-06-29 12:52:29.288 | pid 14104 |  D = disable
+2025-06-29 12:52:29.288 | pid 14104 |      - removes created entries, restores MS boot loader
+2025-06-29 12:52:29.288 | pid 14104 |  R = remove completely
+2025-06-29 12:52:29.288 | pid 14104 |      - disables, then deletes all files and images
+2025-06-29 12:52:29.288 | pid 14104 |  B = boot to UEFI setup
+2025-06-29 12:52:29.288 | pid 14104 |      - lets you disable Secure Boot
+2025-06-29 12:52:29.288 | pid 14104 |      - lets you move HackBGRT before Windows in boot order
+2025-06-29 12:52:29.288 | pid 14104 |  L = show boot log (what HackBGRT did during boot)
+2025-06-29 12:52:29.288 | pid 14104 |  C = cancel
+2025-06-29 12:52:31.161 | pid 14104 | User input: I
+2025-06-29 12:52:31.161 | pid 14104 | 
+2025-06-29 12:52:31.163 | pid 14104 | This setup program lets you edit just one image.
+2025-06-29 12:52:31.163 | pid 14104 | Edit config.txt manually for advanced configuration.
+2025-06-29 12:52:31.164 | pid 14104 | Draw or copy your preferred image to splash.bmp.
+2025-06-29 12:52:31.164 | pid 14104 | StartProcess: mspaint splash.bmp
+2025-06-29 12:52:38.904 | pid 14104 | 
+2025-06-29 12:52:38.908 | pid 14104 | RunPrivilegedActions: disable install enable-bcdedit
+2025-06-29 12:52:38.908 | pid 14104 | Esp: Detect from mountvol output.
+2025-06-29 12:52:38.908 | pid 14104 | Execute: mountvol 
+2025-06-29 12:52:38.937 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:38.937 | pid 14104 | Creates, deletes, or lists a volume mount point.
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL [drive:]path VolumeName
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL [drive:]path /D
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL [drive:]path /L
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL [drive:]path /P
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL /R
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL /N
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL /E
+2025-06-29 12:52:38.937 | pid 14104 | MOUNTVOL drive: /S
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     path        Specifies the existing NTFS directory where the mount
+2025-06-29 12:52:38.937 | pid 14104 |                 point will reside.
+2025-06-29 12:52:38.937 | pid 14104 |     VolumeName  Specifies the volume name that is the target of the mount
+2025-06-29 12:52:38.937 | pid 14104 |                 point.
+2025-06-29 12:52:38.937 | pid 14104 |     /D          Removes the volume mount point from the specified directory.
+2025-06-29 12:52:38.937 | pid 14104 |     /L          Lists the mounted volume name for the specified directory.
+2025-06-29 12:52:38.937 | pid 14104 |     /P          Removes the volume mount point from the specified directory,
+2025-06-29 12:52:38.937 | pid 14104 |                 dismounts the volume, and makes the volume not mountable.
+2025-06-29 12:52:38.937 | pid 14104 |                 You can make the volume mountable again by creating a volume
+2025-06-29 12:52:38.937 | pid 14104 |                 mount point.
+2025-06-29 12:52:38.937 | pid 14104 |     /R          Removes volume mount point directories and registry settings
+2025-06-29 12:52:38.937 | pid 14104 |                 for volumes that are no longer in the system.
+2025-06-29 12:52:38.937 | pid 14104 |     /N          Disables automatic mounting of new volumes.
+2025-06-29 12:52:38.937 | pid 14104 |     /E          Re-enables automatic mounting of new volumes.
+2025-06-29 12:52:38.937 | pid 14104 |     /S          Mount the EFI System Partition on the given drive.
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 | Possible values for VolumeName along with current mount points are:
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     \\?\Volume{c07777b1-3ed7-4e45-b4c2-e025674a331a}\
+2025-06-29 12:52:38.937 | pid 14104 |         F:\
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     \\?\Volume{9b441054-59e5-4d05-b56d-8ea1ae9bc7e9}\
+2025-06-29 12:52:38.937 | pid 14104 |         C:\
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     \\?\Volume{5e1abc94-ad28-45a6-aa36-6ed2ab14dc68}\
+2025-06-29 12:52:38.937 | pid 14104 |         *** NO MOUNT POINTS ***
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     \\?\Volume{856946ce-8cff-4a88-8fc8-c617302cd25c}\
+2025-06-29 12:52:38.937 | pid 14104 |         *** NO MOUNT POINTS ***
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     \\?\Volume{0288ebd3-d67c-430c-f41f-545dee81dc4e}\
+2025-06-29 12:52:38.937 | pid 14104 |         *** NO MOUNT POINTS ***
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 |     \\?\Volume{8c7b79fd-c562-443a-8d60-b514646835e0}\
+2025-06-29 12:52:38.937 | pid 14104 |         *** NO MOUNT POINTS ***
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.937 | pid 14104 | 
+2025-06-29 12:52:38.939 | pid 14104 | Esp: no match
+2025-06-29 12:52:38.939 | pid 14104 | Esp: Try to mount with mountvol.
+2025-06-29 12:52:38.941 | pid 14104 | Esp.Mount: A
+2025-06-29 12:52:38.941 | pid 14104 | Execute: mountvol A: /S
+2025-06-29 12:52:38.953 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:38.953 | pid 14104 | 
+2025-06-29 12:52:38.953 | pid 14104 | 
+2025-06-29 12:52:38.953 | pid 14104 | 
+2025-06-29 12:52:38.953 | pid 14104 | Esp.TryPath: A:\ has MS boot loader
+2025-06-29 12:52:38.953 | pid 14104 | EFI System Partition location is A:\
+2025-06-29 12:52:38.985 | pid 14104 | Detected arch=x64 from MS boot loader, the installer will use that.
+2025-06-29 12:52:38.985 | pid 14104 | 
+2025-06-29 12:52:38.985 | pid 14104 | --- BOOT LOG START ---
+2025-06-29 12:52:38.985 | pid 14104 | HackBGRT version: v2.5.2
+2025-06-29 12:52:38.985 | pid 14104 | Default directory: \EFI\HackBGRT
+2025-06-29 12:52:38.985 | pid 14104 | Working directory: \EFI\HackBGRT
+2025-06-29 12:52:38.985 | pid 14104 | Using n=1, action=1, x=0, y=-200, o=-1000001, path=splash.bmp, rand=0/0
+2025-06-29 12:52:38.985 | pid 14104 | Looking for resolution 999999x999999...
+2025-06-29 12:52:38.985 | pid 14104 | Found resolution 1920x1080.
+2025-06-29 12:52:38.985 | pid 14104 | RSDP @63ffe014: revision = 2, OEM ID = DELL  
+2025-06-29 12:52:38.985 | pid 14104 | * XSDT @63f9a188: OEM ID = DELL  , entry count = 26
+2025-06-29 12:52:38.985 | pid 14104 |  - ACPI table @63f97000: BGRT, revision = 1, OEM ID = DELL  
+2025-06-29 12:52:38.985 | pid 14104 |  -> Returning this one for later use.
+2025-06-29 12:52:38.985 | pid 14104 | Loading splash.bmp.
+2025-06-29 12:52:38.985 | pid 14104 | BMP at (0, 0), center (0, -200), resolution (1920, 1080), orientation 0.
+2025-06-29 12:52:38.985 | pid 14104 | RSDP @63ffe014: revision = 2, OEM ID = DELL  
+2025-06-29 12:52:38.985 | pid 14104 | * XSDT @63f9a188: OEM ID = DELL  , entry count = 26
+2025-06-29 12:52:38.985 | pid 14104 |  - ACPI table @63f97000: BGRT, revision = 1, OEM ID = Mtblx*
+2025-06-29 12:52:38.985 | pid 14104 |  -> Replacing.
+2025-06-29 12:52:38.985 | pid 14104 | Loading application \EFI\HackBGRT\bootmgfw-original.efi.
+2025-06-29 12:52:38.985 | pid 14104 | Failed to load application \EFI\HackBGRT\bootmgfw-original.efi.
+2025-06-29 12:52:38.985 | pid 14104 | Loading application \EFI\Microsoft\Boot\bootmgfw.efi.
+2025-06-29 12:52:38.985 | pid 14104 | 
+2025-06-29 12:52:38.985 | pid 14104 | --- BOOT LOG END ---
+2025-06-29 12:52:38.985 | pid 14104 | LogBGRT: 56 bytes: 42 47 52 54 38 00 00 00 01 A2 4D 74 62 6C 78 2A 48 61 63 6B 42 47 52 54 01 00 00 00 4E 6F 6E 65 01 00 00 00 01 00 00 00 18 60 B6 5E 00 00 00 00 00 00 00 00 00 00 00 00
+2025-06-29 12:52:39.005 | pid 14104 | LogEntries: BootOrder Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='      ' Bytes='01 00 02 00 00 00'
+2025-06-29 12:52:39.005 | pid 14104 | LogEntries: BootCurrent Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=6 Text='  ' Bytes='01 00'
+2025-06-29 12:52:39.032 | pid 14104 | LogEntries: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS X       x   B C D O B J E C T = { 7 f 3 d e 2 2 f - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 58 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 32 00 66 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:39.032 | pid 14104 | LogEntries: Boot0002 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    t W i n d o w s   B o o t   M a n a g e r     *                      y{ b :D `  dh5     F \ E F I \ M i c r o s o f t \ B o o t \ b o o t m g f w . e f i      WINDOWS         x   B C D O B J E C T = { 9 d e a 8 6 2 c - 5 c d d - 4 e 7 0 - a c c 1 - f 3 2 b 3 4 4 d 4 7 9 5 }                    ' Bytes='01 00 00 00 74 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 42 00 6F 00 6F 00 74 00 20 00 4D 00 61 00 6E 00 61 00 67 00 65 00 72 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 46 00 5C 00 45 00 46 00 49 00 5C 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 62 00 6F 00 6F 00 74 00 6D 00 67 00 66 00 77 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 39 00 64 00 65 00 61 00 38 00 36 00 32 00 63 00 2D 00 35 00 63 00 64 00 64 00 2D 00 34 00 65 00 37 00 30 00 2D 00 61 00 63 00 63 00 31 00 2D 00 66 00 33 00 32 00 62 00 33 00 34 00 34 00 64 00 34 00 37 00 39 00 35 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:39.032 | pid 14104 | LogEntries: Boot0000 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    ^ U E F I   P C   S N 5 3 0   N V M e   W D C   2 5 6 G B   2 0 2 2 6 9 8 0 9 5 8 1   1     *                      y{ b :D `  dh5     0 \ E F I \ B o o t \ B o o t X 6 4 . e f i      N     YM    R,Y ' Bytes='01 00 00 00 5E 00 55 00 45 00 46 00 49 00 20 00 50 00 43 00 20 00 53 00 4E 00 35 00 33 00 30 00 20 00 4E 00 56 00 4D 00 65 00 20 00 57 00 44 00 43 00 20 00 32 00 35 00 36 00 47 00 42 00 20 00 32 00 30 00 32 00 32 00 36 00 39 00 38 00 30 00 39 00 35 00 38 00 31 00 20 00 31 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 30 00 5C 00 45 00 46 00 49 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 58 00 36 00 34 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 4E AC 08 81 11 9F 59 4D 85 0E E2 1A 52 2C 59 B2'
+2025-06-29 12:52:39.094 | pid 14104 | HackBGRT boot entry is enabled correctly.
+2025-06-29 12:52:39.152 | pid 14104 | Boot time = 2025-06-29 12:50:15 PM, config.txt changed = 2025-06-29 12:36:04 PM
+2025-06-29 12:52:39.159 | pid 14104 | You may have to disable Fast Startup (Hiberboot) to reboot properly.
+2025-06-29 12:52:39.159 | pid 14104 | Running action 'disable'.
+2025-06-29 12:52:39.653 | pid 14104 | DetectLoader failed: A:\EFI\HackBGRT\bootmgfw-original.efi not found
+2025-06-29 12:52:39.653 | pid 14104 | Execute: bcdedit /enum firmware
+2025-06-29 12:52:40.163 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | Firmware Boot Manager
+2025-06-29 12:52:40.163 | pid 14104 | ---------------------
+2025-06-29 12:52:40.163 | pid 14104 | identifier              {fwbootmgr}
+2025-06-29 12:52:40.163 | pid 14104 | displayorder            {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:40.163 | pid 14104 |                         {bootmgr}
+2025-06-29 12:52:40.163 | pid 14104 |                         {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:40.163 | pid 14104 | timeout                 2
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:40.163 | pid 14104 | --------------------
+2025-06-29 12:52:40.163 | pid 14104 | identifier              {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:40.163 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:40.163 | pid 14104 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:52:40.163 | pid 14104 | description             HackBGRT
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:40.163 | pid 14104 | --------------------
+2025-06-29 12:52:40.163 | pid 14104 | identifier              {bootmgr}
+2025-06-29 12:52:40.163 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:40.163 | pid 14104 | path                    \EFI\Microsoft\Boot\bootmgfw.efi
+2025-06-29 12:52:40.163 | pid 14104 | description             Windows Boot Manager
+2025-06-29 12:52:40.163 | pid 14104 | locale                  en-US
+2025-06-29 12:52:40.163 | pid 14104 | inherit                 {globalsettings}
+2025-06-29 12:52:40.163 | pid 14104 | default                 {current}
+2025-06-29 12:52:40.163 | pid 14104 | resumeobject            {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:52:40.163 | pid 14104 | displayorder            {current}
+2025-06-29 12:52:40.163 | pid 14104 | toolsdisplayorder       {memdiag}
+2025-06-29 12:52:40.163 | pid 14104 | timeout                 30
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | Firmware Application (101fffff)
+2025-06-29 12:52:40.163 | pid 14104 | -------------------------------
+2025-06-29 12:52:40.163 | pid 14104 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:40.163 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:40.163 | pid 14104 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:52:40.163 | pid 14104 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | 
+2025-06-29 12:52:40.163 | pid 14104 | Execute: bcdedit /enum {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:40.257 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:40.257 | pid 14104 | 
+2025-06-29 12:52:40.257 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:40.257 | pid 14104 | --------------------
+2025-06-29 12:52:40.257 | pid 14104 | identifier              {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:40.257 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:40.257 | pid 14104 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:52:40.257 | pid 14104 | description             HackBGRT
+2025-06-29 12:52:40.257 | pid 14104 | 
+2025-06-29 12:52:40.257 | pid 14104 | 
+2025-06-29 12:52:40.257 | pid 14104 | 
+2025-06-29 12:52:40.257 | pid 14104 | Disabling HackBGRT entry {7f3de22f-54bd-11f0-8210-010101010000}.
+2025-06-29 12:52:40.257 | pid 14104 | Execute: bcdedit /delete {7f3de22f-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:40.652 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:40.652 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:40.652 | pid 14104 | 
+2025-06-29 12:52:40.652 | pid 14104 | 
+2025-06-29 12:52:40.652 | pid 14104 | 
+2025-06-29 12:52:40.652 | pid 14104 | Execute: bcdedit /enum {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:40.733 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:40.733 | pid 14104 | 
+2025-06-29 12:52:40.733 | pid 14104 | Firmware Application (101fffff)
+2025-06-29 12:52:40.733 | pid 14104 | -------------------------------
+2025-06-29 12:52:40.733 | pid 14104 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:40.733 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:40.733 | pid 14104 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:52:40.733 | pid 14104 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:52:40.733 | pid 14104 | 
+2025-06-29 12:52:40.733 | pid 14104 | 
+2025-06-29 12:52:40.733 | pid 14104 | 
+2025-06-29 12:52:40.733 | pid 14104 | Execute: bcdedit /enum {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:52:40.844 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:40.844 | pid 14104 | 
+2025-06-29 12:52:40.844 | pid 14104 | Resume from Hibernate
+2025-06-29 12:52:40.844 | pid 14104 | ---------------------
+2025-06-29 12:52:40.844 | pid 14104 | identifier              {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:52:40.844 | pid 14104 | device                  partition=C:
+2025-06-29 12:52:40.844 | pid 14104 | path                    \WINDOWS\system32\winresume.efi
+2025-06-29 12:52:40.844 | pid 14104 | description             Windows Resume Application
+2025-06-29 12:52:40.844 | pid 14104 | locale                  en-US
+2025-06-29 12:52:40.844 | pid 14104 | inherit                 {resumeloadersettings}
+2025-06-29 12:52:40.844 | pid 14104 | recoverysequence        {92e23cad-b331-11ef-81e9-e8e2e473cd93}
+2025-06-29 12:52:40.844 | pid 14104 | recoveryenabled         Yes
+2025-06-29 12:52:40.844 | pid 14104 | isolatedcontext         Yes
+2025-06-29 12:52:40.844 | pid 14104 | allowedinmemorysettings 0x15000075
+2025-06-29 12:52:40.844 | pid 14104 | filedevice              partition=C:
+2025-06-29 12:52:40.844 | pid 14104 | custom:21000026         partition=C:
+2025-06-29 12:52:40.844 | pid 14104 | filepath                \hiberfil.sys
+2025-06-29 12:52:40.844 | pid 14104 | bootmenupolicy          Standard
+2025-06-29 12:52:40.844 | pid 14104 | debugoptionenabled      No
+2025-06-29 12:52:40.844 | pid 14104 | 
+2025-06-29 12:52:40.844 | pid 14104 | 
+2025-06-29 12:52:40.844 | pid 14104 | 
+2025-06-29 12:52:40.844 | pid 14104 | Disabled NVRAM entry for HackBGRT with BCDEdit.
+2025-06-29 12:52:40.904 | pid 14104 | Own entry not found.
+2025-06-29 12:52:40.904 | pid 14104 | Disabled NVRAM entry for HackBGRT.
+2025-06-29 12:52:40.904 | pid 14104 | HackBGRT has been disabled.
+2025-06-29 12:52:40.904 | pid 14104 | Completed action 'disable' successfully.
+2025-06-29 12:52:40.904 | pid 14104 | Running action 'install'.
+2025-06-29 12:52:40.921 | pid 14104 | Installed config.txt to A:\EFI\HackBGRT\config.txt.
+2025-06-29 12:52:40.921 | pid 14104 | config.txt:
+2025-06-29 12:52:40.921 | pid 14104 | # vim: set fileencoding=utf-8
+2025-06-29 12:52:40.921 | pid 14104 | # The same options may be given also as command line parameters in the EFI Shell, which is useful for debugging.
+2025-06-29 12:52:40.921 | pid 14104 | 
+2025-06-29 12:52:40.921 | pid 14104 | # Boot loader path. MS = either backup or original Windows boot loader.
+2025-06-29 12:52:40.921 | pid 14104 | boot=MS
+2025-06-29 12:52:40.921 | pid 14104 | 
+2025-06-29 12:52:40.921 | pid 14104 | # The image is specified with an image line.
+2025-06-29 12:52:40.921 | pid 14104 | # Multiple image lines may be present, in which case one will be picked by random.
+2025-06-29 12:52:40.921 | pid 14104 | # The image line may contain the following parts:
+2025-06-29 12:52:40.921 | pid 14104 | # Any of the following:
+2025-06-29 12:52:40.921 | pid 14104 | #  - "n=(number)", a weight for this image in the randomization process. Default: n=1.
+2025-06-29 12:52:40.921 | pid 14104 | #  - "x=(number)" or "x=keep", the x offset from the center. Default: x=0.
+2025-06-29 12:52:40.921 | pid 14104 | #  - "y=(number)" or "y=keep", the y offset from the center. Default: y=0.
+2025-06-29 12:52:40.921 | pid 14104 | #  - "o=(0|90|180|270|keep)", the screen orientation, degrees anticlockwise. Default: o=keep.
+2025-06-29 12:52:40.921 | pid 14104 | # One of the following:
+2025-06-29 12:52:40.921 | pid 14104 | #  - "keep" to keep the firmware logo. Also keeps coordinates by default.
+2025-06-29 12:52:40.921 | pid 14104 | #  - "remove" to remove the BGRT. Makes x and y meaningless.
+2025-06-29 12:52:40.921 | pid 14104 | #  - "black" to use only a black image. Makes x and y meaningless.
+2025-06-29 12:52:40.921 | pid 14104 | #  - "path=file.bmp" to read an image file.
+2025-06-29 12:52:40.921 | pid 14104 | #    * NOTE: The installer can copy and convert BMP, PNG, JPEG, GIF.
+2025-06-29 12:52:40.921 | pid 14104 | # Examples:
+2025-06-29 12:52:40.921 | pid 14104 | #  - image=remove
+2025-06-29 12:52:40.921 | pid 14104 | #  - image=black
+2025-06-29 12:52:40.921 | pid 14104 | #  - image= x=0 y=-200 path=topimage.bmp
+2025-06-29 12:52:40.921 | pid 14104 | #  - image= n=1 o=90 path=sideways.bmp
+2025-06-29 12:52:40.921 | pid 14104 | #  - image= n=50 y=999999 o=keep path=probable.bmp
+2025-06-29 12:52:40.921 | pid 14104 | # The above examples together would produce
+2025-06-29 12:52:40.921 | pid 14104 | #  - 1/54 chance for the default OS logo
+2025-06-29 12:52:40.921 | pid 14104 | #  - 1/54 chance for black screen
+2025-06-29 12:52:40.921 | pid 14104 | #  - 1/54 chance for topimage.bmp, 200 px above the center of the screen
+2025-06-29 12:52:40.921 | pid 14104 | #  - 1/54 chance for splash.bmp, centered, orientation set to 90 degrees
+2025-06-29 12:52:40.921 | pid 14104 | #  - 50/54 chance for probable.bmp, at the bottom edge, explicitly default orientation
+2025-06-29 12:52:40.921 | pid 14104 | # Default: just one image.
+2025-06-29 12:52:40.921 | pid 14104 | image= y=-200 path=splash.bmp
+2025-06-29 12:52:40.921 | pid 14104 | 
+2025-06-29 12:52:40.921 | pid 14104 | # Preferred resolution. Use 0x0 for maximum and -1x-1 for original.
+2025-06-29 12:52:40.921 | pid 14104 | resolution=0x0
+2025-06-29 12:52:40.921 | pid 14104 | 
+2025-06-29 12:52:40.921 | pid 14104 | # Logging (0 for disabled, 1 for enabled).
+2025-06-29 12:52:40.921 | pid 14104 | # When logging is enabled, setup.exe can show debug information about the current boot.
+2025-06-29 12:52:40.921 | pid 14104 | # The log might occupy a few kilobytes of RAM.
+2025-06-29 12:52:40.921 | pid 14104 | log=1
+2025-06-29 12:52:40.921 | pid 14104 | 
+2025-06-29 12:52:40.921 | pid 14104 | # Debug mode (0 for disabled, 1 for enabled).
+2025-06-29 12:52:40.921 | pid 14104 | # Shows debug information and prompts for keypress before booting.
+2025-06-29 12:52:40.921 | pid 14104 | debug=0
+2025-06-29 12:52:40.921 | pid 14104 | InstallImageFile: splash.bmp
+2025-06-29 12:52:40.952 | pid 14104 | Installed image splash.bmp to A:\EFI\HackBGRT\splash.bmp, size 1920x1200.
+2025-06-29 12:52:40.952 | pid 14104 | Installed shim-signed\shimx64.efi to A:\EFI\HackBGRT\loader.efi.
+2025-06-29 12:52:40.968 | pid 14104 | Installed shim-signed\mmx64.efi to A:\EFI\HackBGRT\mmx64.efi.
+2025-06-29 12:52:40.969 | pid 14104 | Installed efi-signed\bootx64.efi to A:\EFI\HackBGRT\䥗䑎坏SX.
+2025-06-29 12:52:40.969 | pid 14104 | Installed efi-signed\bootx64.efi to A:\EFI\HackBGRT\grubx64.efi.
+2025-06-29 12:52:40.969 | pid 14104 | Installed certificate.cer to A:\EFI\HackBGRT\certificate.cer.
+2025-06-29 12:52:40.969 | pid 14104 | HackBGRT has been copied to A:\EFI\HackBGRT.
+2025-06-29 12:52:40.969 | pid 14104 | On first boot, select 'Enroll hash from disk' and enroll EFI\HackBGRT\grubx64.efi.
+2025-06-29 12:52:40.969 | pid 14104 | Alternatively, select 'Enroll key from disk' and enroll EFI\HackBGRT\certificate.cer.
+2025-06-29 12:52:40.969 | pid 14104 | Completed action 'install' successfully.
+2025-06-29 12:52:40.969 | pid 14104 | Running action 'enable-bcdedit'.
+2025-06-29 12:52:40.969 | pid 14104 | Execute: manage-bde -status
+2025-06-29 12:52:41.428 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:41.428 | pid 14104 | BitLocker Drive Encryption: Configuration Tool version 10.0.26100
+2025-06-29 12:52:41.428 | pid 14104 | Copyright (C) 2013 Microsoft Corporation. All rights reserved.
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | Disk volumes that can be protected with
+2025-06-29 12:52:41.428 | pid 14104 | BitLocker Drive Encryption:
+2025-06-29 12:52:41.428 | pid 14104 | Volume F: [Portable Backup]
+2025-06-29 12:52:41.428 | pid 14104 | [Data Volume]
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 |     Size:                 931.50 GB
+2025-06-29 12:52:41.428 | pid 14104 |     BitLocker Version:    2.0
+2025-06-29 12:52:41.428 | pid 14104 |     Conversion Status:    Used Space Only Encrypted
+2025-06-29 12:52:41.428 | pid 14104 |     Percentage Encrypted: 100.0%
+2025-06-29 12:52:41.428 | pid 14104 |     Encryption Method:    AES 128
+2025-06-29 12:52:41.428 | pid 14104 |     Protection Status:    Protection On
+2025-06-29 12:52:41.428 | pid 14104 |     Lock Status:          Unlocked
+2025-06-29 12:52:41.428 | pid 14104 |     Identification Field: Unknown
+2025-06-29 12:52:41.428 | pid 14104 |     Automatic Unlock:     Disabled
+2025-06-29 12:52:41.428 | pid 14104 |     Key Protectors:
+2025-06-29 12:52:41.428 | pid 14104 |         Password
+2025-06-29 12:52:41.428 | pid 14104 |         Numerical Password
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | Volume C: [Windows]
+2025-06-29 12:52:41.428 | pid 14104 | [OS Volume]
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 |     Size:                 235.14 GB
+2025-06-29 12:52:41.428 | pid 14104 |     BitLocker Version:    None
+2025-06-29 12:52:41.428 | pid 14104 |     Conversion Status:    Fully Decrypted
+2025-06-29 12:52:41.428 | pid 14104 |     Percentage Encrypted: 0.0%
+2025-06-29 12:52:41.428 | pid 14104 |     Encryption Method:    None
+2025-06-29 12:52:41.428 | pid 14104 |     Protection Status:    Protection Off
+2025-06-29 12:52:41.428 | pid 14104 |     Lock Status:          Unlocked
+2025-06-29 12:52:41.428 | pid 14104 |     Identification Field: None
+2025-06-29 12:52:41.428 | pid 14104 |     Key Protectors:       None Found
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | Volume \\?\Volume{856946ce-8cff-4a88-8fc8-c617302cd25c}\ []
+2025-06-29 12:52:41.428 | pid 14104 | [Data Volume]
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 |     Size:                 0.57 GB
+2025-06-29 12:52:41.428 | pid 14104 |     BitLocker Version:    None
+2025-06-29 12:52:41.428 | pid 14104 |     Conversion Status:    Fully Decrypted
+2025-06-29 12:52:41.428 | pid 14104 |     Percentage Encrypted: 0.0%
+2025-06-29 12:52:41.428 | pid 14104 |     Encryption Method:    None
+2025-06-29 12:52:41.428 | pid 14104 |     Protection Status:    Protection Off
+2025-06-29 12:52:41.428 | pid 14104 |     Lock Status:          Unlocked
+2025-06-29 12:52:41.428 | pid 14104 |     Identification Field: None
+2025-06-29 12:52:41.428 | pid 14104 |     Automatic Unlock:     Disabled
+2025-06-29 12:52:41.428 | pid 14104 |     Key Protectors:       None Found
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | 
+2025-06-29 12:52:41.428 | pid 14104 | BitLocker is enabled. Make sure you have your recovery key!
+2025-06-29 12:52:41.432 | pid 14104 | Choose action (press a key):
+2025-06-29 12:52:41.432 | pid 14104 |  I = Install anyway; THIS MAY BE DANGEROUS!
+2025-06-29 12:52:41.432 | pid 14104 |  C = Cancel
+2025-06-29 12:52:43.429 | pid 14104 | User input: I
+2025-06-29 12:52:43.429 | pid 14104 | 
+2025-06-29 12:52:43.429 | pid 14104 | Continuing. THIS MAY BE DANGEROUS!
+2025-06-29 12:52:43.445 | pid 14104 | Execute: bcdedit /enum firmware
+2025-06-29 12:52:43.572 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:43.572 | pid 14104 | 
+2025-06-29 12:52:43.572 | pid 14104 | Firmware Boot Manager
+2025-06-29 12:52:43.572 | pid 14104 | ---------------------
+2025-06-29 12:52:43.572 | pid 14104 | identifier              {fwbootmgr}
+2025-06-29 12:52:43.572 | pid 14104 | displayorder            {bootmgr}
+2025-06-29 12:52:43.572 | pid 14104 |                         {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:43.572 | pid 14104 | timeout                 2
+2025-06-29 12:52:43.572 | pid 14104 | 
+2025-06-29 12:52:43.572 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:43.572 | pid 14104 | --------------------
+2025-06-29 12:52:43.572 | pid 14104 | identifier              {bootmgr}
+2025-06-29 12:52:43.572 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:43.572 | pid 14104 | path                    \EFI\Microsoft\Boot\bootmgfw.efi
+2025-06-29 12:52:43.572 | pid 14104 | description             Windows Boot Manager
+2025-06-29 12:52:43.572 | pid 14104 | locale                  en-US
+2025-06-29 12:52:43.572 | pid 14104 | inherit                 {globalsettings}
+2025-06-29 12:52:43.572 | pid 14104 | default                 {current}
+2025-06-29 12:52:43.572 | pid 14104 | resumeobject            {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:52:43.572 | pid 14104 | displayorder            {current}
+2025-06-29 12:52:43.572 | pid 14104 | toolsdisplayorder       {memdiag}
+2025-06-29 12:52:43.572 | pid 14104 | timeout                 30
+2025-06-29 12:52:43.572 | pid 14104 | 
+2025-06-29 12:52:43.572 | pid 14104 | Firmware Application (101fffff)
+2025-06-29 12:52:43.572 | pid 14104 | -------------------------------
+2025-06-29 12:52:43.572 | pid 14104 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:43.572 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:43.572 | pid 14104 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:52:43.572 | pid 14104 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:52:43.572 | pid 14104 | 
+2025-06-29 12:52:43.572 | pid 14104 | 
+2025-06-29 12:52:43.572 | pid 14104 | 
+2025-06-29 12:52:43.572 | pid 14104 | Execute: bcdedit /copy {bootmgr} /d HackBGRT
+2025-06-29 12:52:43.733 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:43.733 | pid 14104 | The entry was successfully copied to {7f3de230-54bd-11f0-8210-010101010000}.
+2025-06-29 12:52:43.733 | pid 14104 | 
+2025-06-29 12:52:43.733 | pid 14104 | 
+2025-06-29 12:52:43.733 | pid 14104 | 
+2025-06-29 12:52:43.733 | pid 14104 | Execute: bcdedit /set {7f3de230-54bd-11f0-8210-010101010000} device partition=A:\
+2025-06-29 12:52:43.858 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:43.858 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:43.858 | pid 14104 | 
+2025-06-29 12:52:43.858 | pid 14104 | 
+2025-06-29 12:52:43.858 | pid 14104 | 
+2025-06-29 12:52:43.858 | pid 14104 | Execute: bcdedit /set {7f3de230-54bd-11f0-8210-010101010000} path \EFI\HackBGRT\loader.efi
+2025-06-29 12:52:43.992 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:43.992 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:43.992 | pid 14104 | 
+2025-06-29 12:52:43.992 | pid 14104 | 
+2025-06-29 12:52:43.992 | pid 14104 | 
+2025-06-29 12:52:43.992 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} locale
+2025-06-29 12:52:44.069 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.069 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.069 | pid 14104 | 
+2025-06-29 12:52:44.069 | pid 14104 | 
+2025-06-29 12:52:44.069 | pid 14104 | 
+2025-06-29 12:52:44.069 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} inherit
+2025-06-29 12:52:44.149 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.149 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.149 | pid 14104 | 
+2025-06-29 12:52:44.149 | pid 14104 | 
+2025-06-29 12:52:44.149 | pid 14104 | 
+2025-06-29 12:52:44.149 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} default
+2025-06-29 12:52:44.226 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.226 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.226 | pid 14104 | 
+2025-06-29 12:52:44.226 | pid 14104 | 
+2025-06-29 12:52:44.226 | pid 14104 | 
+2025-06-29 12:52:44.226 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} resumeobject
+2025-06-29 12:52:44.297 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.297 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.297 | pid 14104 | 
+2025-06-29 12:52:44.297 | pid 14104 | 
+2025-06-29 12:52:44.297 | pid 14104 | 
+2025-06-29 12:52:44.297 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} displayorder
+2025-06-29 12:52:44.371 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.371 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.371 | pid 14104 | 
+2025-06-29 12:52:44.371 | pid 14104 | 
+2025-06-29 12:52:44.371 | pid 14104 | 
+2025-06-29 12:52:44.371 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} toolsdisplayorder
+2025-06-29 12:52:44.451 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.451 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.451 | pid 14104 | 
+2025-06-29 12:52:44.451 | pid 14104 | 
+2025-06-29 12:52:44.451 | pid 14104 | 
+2025-06-29 12:52:44.451 | pid 14104 | Execute: bcdedit /deletevalue {7f3de230-54bd-11f0-8210-010101010000} timeout
+2025-06-29 12:52:44.530 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.530 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.530 | pid 14104 | 
+2025-06-29 12:52:44.530 | pid 14104 | 
+2025-06-29 12:52:44.530 | pid 14104 | 
+2025-06-29 12:52:44.530 | pid 14104 | Execute: bcdedit /set {fwbootmgr} displayorder {7f3de230-54bd-11f0-8210-010101010000} /addfirst
+2025-06-29 12:52:44.680 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.680 | pid 14104 | The operation completed successfully.
+2025-06-29 12:52:44.680 | pid 14104 | 
+2025-06-29 12:52:44.680 | pid 14104 | 
+2025-06-29 12:52:44.680 | pid 14104 | 
+2025-06-29 12:52:44.680 | pid 14104 | Enabled NVRAM entry for HackBGRT with BCDEdit.
+2025-06-29 12:52:44.680 | pid 14104 | Execute: bcdedit /enum {7f3de230-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:44.776 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.776 | pid 14104 | 
+2025-06-29 12:52:44.776 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:44.776 | pid 14104 | --------------------
+2025-06-29 12:52:44.776 | pid 14104 | identifier              {7f3de230-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:44.776 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:44.776 | pid 14104 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:52:44.776 | pid 14104 | description             HackBGRT
+2025-06-29 12:52:44.776 | pid 14104 | 
+2025-06-29 12:52:44.776 | pid 14104 | 
+2025-06-29 12:52:44.776 | pid 14104 | 
+2025-06-29 12:52:44.776 | pid 14104 | Updating own entry 0001.
+2025-06-29 12:52:44.776 | pid 14104 | Read EFI variable: Boot0002 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    t W i n d o w s   B o o t   M a n a g e r     *                      y{ b :D `  dh5     F \ E F I \ M i c r o s o f t \ B o o t \ b o o t m g f w . e f i      WINDOWS         x   B C D O B J E C T = { 9 d e a 8 6 2 c - 5 c d d - 4 e 7 0 - a c c 1 - f 3 2 b 3 4 4 d 4 7 9 5 }                    ' Bytes='01 00 00 00 74 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 42 00 6F 00 6F 00 74 00 20 00 4D 00 61 00 6E 00 61 00 67 00 65 00 72 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 46 00 5C 00 45 00 46 00 49 00 5C 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 62 00 6F 00 6F 00 74 00 6D 00 67 00 66 00 77 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 39 00 64 00 65 00 61 00 38 00 36 00 32 00 63 00 2D 00 35 00 63 00 64 00 64 00 2D 00 34 00 65 00 37 00 30 00 2D 00 61 00 63 00 63 00 31 00 2D 00 66 00 33 00 32 00 62 00 33 00 34 00 34 00 64 00 34 00 37 00 39 00 35 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:44.776 | pid 14104 | Read EFI variable: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS         x   B C D O B J E C T = { 7 f 3 d e 2 3 0 - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 33 00 30 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:44.776 | pid 14104 | Writing EFI variable Boot0001 (see log for details)
+2025-06-29 12:52:44.776 | pid 14104 | Writing EFI variable: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS X       x   B C D O B J E C T = { 7 f 3 d e 2 3 0 - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 58 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 33 00 30 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:44.805 | pid 14104 | Old boot order: BootOrder Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='      ' Bytes='01 00 02 00 00 00'
+2025-06-29 12:52:44.805 | pid 14104 | Execute: bcdedit /enum {7f3de230-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:44.898 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:44.898 | pid 14104 | 
+2025-06-29 12:52:44.898 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:44.898 | pid 14104 | --------------------
+2025-06-29 12:52:44.898 | pid 14104 | identifier              {7f3de230-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:44.898 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:44.898 | pid 14104 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:52:44.898 | pid 14104 | description             HackBGRT
+2025-06-29 12:52:44.898 | pid 14104 | 
+2025-06-29 12:52:44.898 | pid 14104 | 
+2025-06-29 12:52:44.898 | pid 14104 | 
+2025-06-29 12:52:44.900 | pid 14104 | Verifying config: boot=MS
+2025-06-29 12:52:44.900 | pid 14104 | DetectLoader failed: A:\EFI\HackBGRT\bootmgfw-original.efi not found
+2025-06-29 12:52:45.140 | pid 14104 | LogEntries: BootOrder Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='      ' Bytes='01 00 02 00 00 00'
+2025-06-29 12:52:45.140 | pid 14104 | LogEntries: BootCurrent Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=6 Text='  ' Bytes='01 00'
+2025-06-29 12:52:45.142 | pid 14104 | LogEntries: Boot0001 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    d H a c k B G R T     *                      y{ b :D `  dh5     6 \ E F I \ H a c k B G R T \ l o a d e r . e f i      WINDOWS X       x   B C D O B J E C T = { 7 f 3 d e 2 3 0 - 5 4 b d - 1 1 f 0 - 8 2 1 0 - 0 1 0 1 0 1 0 1 0 0 0 0 }                    ' Bytes='01 00 00 00 64 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 36 00 5C 00 45 00 46 00 49 00 5C 00 48 00 61 00 63 00 6B 00 42 00 47 00 52 00 54 00 5C 00 6C 00 6F 00 61 00 64 00 65 00 72 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 58 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 37 00 66 00 33 00 64 00 65 00 32 00 33 00 30 00 2D 00 35 00 34 00 62 00 64 00 2D 00 31 00 31 00 66 00 30 00 2D 00 38 00 32 00 31 00 30 00 2D 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 31 00 30 00 30 00 30 00 30 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:45.142 | pid 14104 | LogEntries: Boot0002 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    t W i n d o w s   B o o t   M a n a g e r     *                      y{ b :D `  dh5     F \ E F I \ M i c r o s o f t \ B o o t \ b o o t m g f w . e f i      WINDOWS         x   B C D O B J E C T = { 9 d e a 8 6 2 c - 5 c d d - 4 e 7 0 - a c c 1 - f 3 2 b 3 4 4 d 4 7 9 5 }                    ' Bytes='01 00 00 00 74 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 42 00 6F 00 6F 00 74 00 20 00 4D 00 61 00 6E 00 61 00 67 00 65 00 72 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 46 00 5C 00 45 00 46 00 49 00 5C 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 62 00 6F 00 6F 00 74 00 6D 00 67 00 66 00 77 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 57 49 4E 44 4F 57 53 00 01 00 00 00 88 00 00 00 78 00 00 00 42 00 43 00 44 00 4F 00 42 00 4A 00 45 00 43 00 54 00 3D 00 7B 00 39 00 64 00 65 00 61 00 38 00 36 00 32 00 63 00 2D 00 35 00 63 00 64 00 64 00 2D 00 34 00 65 00 37 00 30 00 2D 00 61 00 63 00 63 00 31 00 2D 00 66 00 33 00 32 00 62 00 33 00 34 00 34 00 64 00 34 00 37 00 39 00 35 00 7D 00 00 00 0C 00 01 00 00 00 10 00 00 00 04 00 00 00 7F FF 04 00'
+2025-06-29 12:52:45.142 | pid 14104 | LogEntries: Boot0000 Guid={8be4df61-93ca-11d2-aa0d-00e098032b8c} Attributes=7 Text='    ^ U E F I   P C   S N 5 3 0   N V M e   W D C   2 5 6 G B   2 0 2 2 6 9 8 0 9 5 8 1   1     *                      y{ b :D `  dh5     0 \ E F I \ B o o t \ B o o t X 6 4 . e f i      N     YM    R,Y ' Bytes='01 00 00 00 5E 00 55 00 45 00 46 00 49 00 20 00 50 00 43 00 20 00 53 00 4E 00 35 00 33 00 30 00 20 00 4E 00 56 00 4D 00 65 00 20 00 57 00 44 00 43 00 20 00 32 00 35 00 36 00 47 00 42 00 20 00 32 00 30 00 32 00 32 00 36 00 39 00 38 00 30 00 39 00 35 00 38 00 31 00 20 00 31 00 00 00 04 01 2A 00 01 00 00 00 00 08 00 00 00 00 00 00 FF 9F 0F 00 00 00 00 00 FD 79 7B 8C 62 C5 3A 44 8D 60 B5 14 64 68 35 E0 02 02 04 04 30 00 5C 00 45 00 46 00 49 00 5C 00 42 00 6F 00 6F 00 74 00 5C 00 42 00 6F 00 6F 00 74 00 58 00 36 00 34 00 2E 00 65 00 66 00 69 00 00 00 7F FF 04 00 4E AC 08 81 11 9F 59 4D 85 0E E2 1A 52 2C 59 B2'
+2025-06-29 12:52:45.221 | pid 14104 | HackBGRT boot entry is enabled correctly.
+2025-06-29 12:52:45.221 | pid 14104 | Execute: bcdedit /enum firmware
+2025-06-29 12:52:45.348 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | Firmware Boot Manager
+2025-06-29 12:52:45.348 | pid 14104 | ---------------------
+2025-06-29 12:52:45.348 | pid 14104 | identifier              {fwbootmgr}
+2025-06-29 12:52:45.348 | pid 14104 | displayorder            {7f3de230-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:45.348 | pid 14104 |                         {bootmgr}
+2025-06-29 12:52:45.348 | pid 14104 |                         {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:45.348 | pid 14104 | timeout                 2
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:45.348 | pid 14104 | --------------------
+2025-06-29 12:52:45.348 | pid 14104 | identifier              {7f3de230-54bd-11f0-8210-010101010000}
+2025-06-29 12:52:45.348 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:45.348 | pid 14104 | path                    \EFI\HackBGRT\loader.efi
+2025-06-29 12:52:45.348 | pid 14104 | description             HackBGRT
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | Windows Boot Manager
+2025-06-29 12:52:45.348 | pid 14104 | --------------------
+2025-06-29 12:52:45.348 | pid 14104 | identifier              {bootmgr}
+2025-06-29 12:52:45.348 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:45.348 | pid 14104 | path                    \EFI\Microsoft\Boot\bootmgfw.efi
+2025-06-29 12:52:45.348 | pid 14104 | description             Windows Boot Manager
+2025-06-29 12:52:45.348 | pid 14104 | locale                  en-US
+2025-06-29 12:52:45.348 | pid 14104 | inherit                 {globalsettings}
+2025-06-29 12:52:45.348 | pid 14104 | default                 {current}
+2025-06-29 12:52:45.348 | pid 14104 | resumeobject            {38fe68ff-31e1-11ee-8137-28cdc456b372}
+2025-06-29 12:52:45.348 | pid 14104 | displayorder            {current}
+2025-06-29 12:52:45.348 | pid 14104 | toolsdisplayorder       {memdiag}
+2025-06-29 12:52:45.348 | pid 14104 | timeout                 30
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | Firmware Application (101fffff)
+2025-06-29 12:52:45.348 | pid 14104 | -------------------------------
+2025-06-29 12:52:45.348 | pid 14104 | identifier              {1147829d-b8b4-11ef-81ec-806e6f6e6963}
+2025-06-29 12:52:45.348 | pid 14104 | device                  partition=A:
+2025-06-29 12:52:45.348 | pid 14104 | path                    \EFI\Boot\BootX64.efi
+2025-06-29 12:52:45.348 | pid 14104 | description             UEFI PC SN530 NVMe WDC 256GB 202269809581 1
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | Completed action 'enable-bcdedit' successfully.
+2025-06-29 12:52:45.348 | pid 14104 | 
+2025-06-29 12:52:45.348 | pid 14104 | All done!
+2025-06-29 12:52:45.348 | pid 14104 | If you need to report a bug,
+2025-06-29 12:52:45.348 | pid 14104 |  - run this setup again with menu option L (show-boot-log)
+2025-06-29 12:52:45.348 | pid 14104 |  - then include the setup.log file with your report.
+2025-06-29 12:52:45.364 | pid 14104 | Press any key to quit.
+2025-06-29 12:52:48.951 | pid 14104 | Execute: mountvol A:\ /D
+2025-06-29 12:52:48.970 | pid 14104 | Exit code: 0, output:
+2025-06-29 12:52:48.970 | pid 14104 | 
+2025-06-29 12:52:48.970 | pid 14104 | 
+2025-06-29 12:52:48.970 | pid 14104 | 
